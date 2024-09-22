@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "6eba61c8-1d5c-4547-9040-1a41e92fdb24",
+		"name": "BoltEarth Event",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10208467"
+	},
+	"item": [
+		{
+			"name": "List events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test Event\",\n    \"eventType\": \"MOVIE\",\n    \"startDateTime\": \"2024-12-12 00:00:00\",\n    \"endDateTime\": \"2024-12-20 23:59:59\",\n    \"availableTickets\": 100,\n    \"venue\": \"Gurgaon\",\n    \"pricePerTicket\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update event",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Test Event\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/ef2bb596-a21b-48e7-89c6-5f7e66501639",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"ef2bb596-a21b-48e7-89c6-5f7e66501639"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get available tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/1/available-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"1",
+						"available-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy tickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"426e1286-ce1e-4e25-8c80-859ba1c622cb\",\n    \"numOfTickets\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/426e1286-ce1e-4e25-8c80-859ba1c622cb/buy-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"426e1286-ce1e-4e25-8c80-859ba1c622cb",
+						"buy-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Sold Tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/sold-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"sold-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sold Tickets Per Event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/6d90a944-f588-4299-9ff7-445acc1a36e6/sold-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"6d90a944-f588-4299-9ff7-445acc1a36e6",
+						"sold-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/sold-tickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"sold-tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Revenue Per Event",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/events/6d90a944-f588-4299-9ff7-445acc1a36e6/revenue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"events",
+						"6d90a944-f588-4299-9ff7-445acc1a36e6",
+						"revenue"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
